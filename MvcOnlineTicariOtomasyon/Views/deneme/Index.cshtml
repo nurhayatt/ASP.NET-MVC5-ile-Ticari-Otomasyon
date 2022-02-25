@@ -1,0 +1,25 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model  List<deneme>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<<table class="table table-hover">
+    <tr>
+
+        <th>denemeid </th>
+
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+
+          <td>@x.denemeid</td>
+
+
+        </tr>
+    }
+</table>
+

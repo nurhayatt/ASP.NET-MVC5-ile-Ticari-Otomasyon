@@ -1,0 +1,38 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<KargoDetay>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<table class="table table-bordered" style="margin-top:20px;">
+    <tr>
+        
+        <th>Personel</th>
+        <th>Alıcı</th>
+        <th>Tarih</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var k in Model)
+    {
+
+<tr>
+    <td>
+        @k.Personel
+    </td>
+    <td>
+        @k.Alici
+    </td>
+    <td>
+        @k.Tarih
+    </td>
+    <td>
+        <a href="/Departman/DepartmanSil/@k.KargoDetayid" class="btn btn-danger">Sil</a>
+    </td>
+
+    
+</tr>
+    }
+</table>
+<a href="/Departman/DepartmanEkle" class="btn btn-info">Departman Ekle</a>
+
+
